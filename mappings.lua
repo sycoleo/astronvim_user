@@ -32,6 +32,29 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- toggle neo-tree
+    ["<C-n>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle neo-tree" },
+    ["<A-j>"] = {
+      function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Next buffer",
+    },
+    ["<A-k>"] = {
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
+    ["A-J"] = {
+      function() require("astronvim.utils.buffer").move(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Move buffer tab right",
+    },
+    ["<A-K>"] = {
+      function() require("astronvim.utils.buffer").move(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Move buffer tab left",
+    },
+    ["s"] = { function() require("flash").jump() end, desc = "Flash" },
+    ["S"] = { function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    ["r"] = {function() require("flash").remote() end, desc = "Remote Flash" },
+    ["R"] = {function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    ["<C-s>"] = {function() require("flash").toggle() end, desc = "Toggle Flash Search" },
   },
   t = {
     -- setting a mapping to false will disable it

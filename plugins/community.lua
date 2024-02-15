@@ -6,4 +6,8 @@ return {
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- for nord fox theme
+  { import = "astrocommunity.colorscheme.nightfox-nvim" },
+  -- flash movement
+  { import = "astrocommunity.motion.flash-nvim" },
 }
