@@ -81,5 +81,9 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    local unmap = vim.api.nvim_del_keymap
+    -- unmap keys
+    unmap("n", "<leader>c")
+    unmap("n", "<leader>C")
   end,
 }

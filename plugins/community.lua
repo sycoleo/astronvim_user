@@ -10,4 +10,12 @@ return {
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   -- flash movement
   { import = "astrocommunity.motion.flash-nvim" },
+  -- noice: cmdline and nice notice
+  { import = "astrocommunity.utility.noice-nvim" },
+  -- cmp-cmdline: command completion
+  { import = "astrocommunity.completion.cmp-cmdline" },
+  -- diffview
+  { import = "astrocommunity.git.diffview-nvim" },
+  -- telescope extensions
+  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
 }

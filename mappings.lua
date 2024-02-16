@@ -55,6 +55,12 @@ return {
     ["r"] = {function() require("flash").remote() end, desc = "Remote Flash" },
     ["R"] = {function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
     ["<C-s>"] = {function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+    -- zoxide
+    ["<leader>cd"] = { function () require("telescope").extensions.zoxide.list() end },
+    -- diffview open
+    ["<leader>gd"] = { "<cmd>DiffviewOpen<cr>", desc = "diffview open" },
+    ["<leader>gf"] = { "<cmd>DiffviewFileHistory<cr>", desc = "diffview file history" },
+    ["<leader>ge"] = { "<cmd>DiffviewClose<cr>", desc = "diffview close" },
   },
   t = {
     -- setting a mapping to false will disable it
